@@ -1,0 +1,7 @@
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    - WeDevelop\StagingWarning\Extensions\LeftAndMainWarningExtension
+
+Silverstripe\SiteConfig\SiteConfig:
+  extensions:
+    - WeDevelop\StagingWarning\Extensions\SiteConfigExtension

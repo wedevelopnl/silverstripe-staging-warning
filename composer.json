@@ -1,0 +1,26 @@
+{
+    "name": "wedevelopnl/silverstripe-staging-warning",
+    "description": "A module that adds some warning to the staging admin.",
+    "type": "silverstripe-vendormodule",
+    "keywords": [
+        "silverstripe",
+        "CMS"
+    ],
+    "authors": [
+        {
+            "name": "Dennis Prins",
+            "email": "dennis@wedevelop.nl"
+        }
+    ],
+    "require": {
+        "silverstripe/framework": "^5.0",
+        "silverstripe/admin": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WeDevelop\\StagingWarning\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
