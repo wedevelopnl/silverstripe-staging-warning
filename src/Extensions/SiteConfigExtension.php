@@ -27,7 +27,7 @@ final class SiteConfigExtension extends DataExtension
                 CheckboxField::create('ShowStagingWarning', 'Show staging warning at top of the admin panel'),
                 Wrapper::create([
                     TextField::create('StagingWarningBarText', 'Staging warning bar text'),
-                ])->displayIf('ShowStagingWarning')->isChecked()->endIf(),
+                ])->displayIf('ShowStagingWarning')->isChecked()->end(),
             ]);
         }
     }

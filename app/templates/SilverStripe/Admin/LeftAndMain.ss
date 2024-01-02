@@ -16,7 +16,7 @@
             padding-top: 41px;
         }
         .cms-container:before {
-            content: "Let op: Dit is een staging of development omgeving! Gebruik deze omgeving alleen als test!";
+            content: "<% if $SiteConfig.StagingWarningBarText %>$SiteConfig.StagingWarningBarText<% else %>Warning: this is a development/staging environment.<% end_if %>";
             position: absolute;
             top: 0;
             right: 0;
