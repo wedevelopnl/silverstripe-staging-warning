@@ -1,7 +1,9 @@
-SilverStripe\Admin\LeftAndMain:
-  extensions:
-    - WeDevelop\StagingWarning\Extensions\LeftAndMainWarningExtension
-
+---
+name: silverstripe-staging-warning
+---
+Except:
+  environment: 'live'
+---
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - WeDevelop\StagingWarning\Extensions\SiteConfigExtension

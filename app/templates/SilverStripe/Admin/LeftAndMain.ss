@@ -10,7 +10,7 @@
           data-member-tempid="$CurrentMember.TempIDHash.ATT" <% if $GraphQLLegacy %>data-graphql-legacy="1"<% end_if %>
 >
 <% include SilverStripe\\Admin\\CMSLoadingScreen %>
-<% if $WarningModal %>
+<% if $SiteConfig.ShowStagingWarning %>
     <style>
         .cms-container {
             padding-top: 41px;
