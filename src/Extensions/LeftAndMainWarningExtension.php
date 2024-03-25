@@ -10,7 +10,7 @@ class LeftAndMainWarningExtension extends LeftAndMainExtension
 {
     public function WarningModal(): bool
     {
-        if (SiteConfig::current_site_config()->ShowStagingWarning && (Director::isDev() || Director::isTest())) {
+        if (Director::isDev() || Director::isTest()) {
             return true;
         }
 
