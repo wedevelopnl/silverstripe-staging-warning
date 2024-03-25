@@ -33,5 +33,11 @@
             "composer/installers": false,
             "silverstripe/vendor-plugin": false
         }
+    },
+    "extra": {
+        "installer-name": "silverstripe-staging-warning",
+        "expose": [
+            "client/dist"
+        ]
     }
 }

@@ -1,10 +1,30 @@
 ---
 name: silverstripe-staging-warning
 ---
-SilverStripe\Admin\LeftAndMain:
-  extensions:
-    - WeDevelop\StagingWarning\Extensions\LeftAndMainWarningExtension
-
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
     - WeDevelop\StagingWarning\Extensions\SiteConfigExtension
+
+---
+Name: silverstripe-staging-warning-admin-test
+Only:
+  ModuleExists: silverstripe/admin
+  environment: 'test'
+---
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    LeftAndMainWarningExtension: WeDevelop\StagingWarning\Extensions\LeftAndMainWarningExtension
+  extra_requirements_css:
+    - 'wedevelopnl/silverstripe-staging-warning:client/dist/styles/bundle.css'
+
+---
+Name: silverstripe-staging-warning-admin-dev
+Only:
+  ModuleExists: silverstripe/admin
+  environment: 'dev'
+---
+SilverStripe\Admin\LeftAndMain:
+  extensions:
+    LeftAndMainWarningExtension: WeDevelop\StagingWarning\Extensions\LeftAndMainWarningExtension
+  extra_requirements_css:
+    - 'wedevelopnl/silverstripe-staging-warning:client/dist/styles/bundle.css'

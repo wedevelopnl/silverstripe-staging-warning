@@ -5,16 +5,21 @@ declare(strict_types=1);
 namespace WeDevelop\StagingWarning\Extensions;
 
 use SilverStripe\Admin\LeftAndMainExtension;
-use SilverStripe\Control\Director;
+use SilverStripe\View\Requirements;
 
 class LeftAndMainWarningExtension extends LeftAndMainExtension
 {
-    public function WarningModal(): bool
+    #[\Override]
+    public function init()
     {
-        if (Director::isDev() || Director::isTest()) {
-            return true;
+        $customWarningText = $this->getOwner()->SiteConfig()->StagingWarningBarText;
+        if ($customWarningText !== null && $customWarningText !== '') {
+            $customContent = <<<CSS
+                .cms-container:before {
+                    content: "{$customWarningText}";
+                }
+                CSS;
+            Requirements::customCSS($customContent);
         }
-
-        return false;
     }
 }
