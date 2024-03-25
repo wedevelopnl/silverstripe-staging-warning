@@ -26,3 +26,6 @@ down: ##@develop Docker compose down
 
 sh: ##@develop Open shell in container
 	${docker} sh
+
+test: ##@develop Run code tests
+	${docker} ./vendor/bin/phpstan analyse

@@ -1,10 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace WeDevelop\StagingWarning\Extensions;
 
 use SilverStripe\Admin\LeftAndMainExtension;
 use SilverStripe\Control\Director;
-use SilverStripe\SiteConfig\SiteConfig;
 
 class LeftAndMainWarningExtension extends LeftAndMainExtension
 {
