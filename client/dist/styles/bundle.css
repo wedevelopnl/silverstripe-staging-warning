@@ -1,0 +1,19 @@
+.cms-container {
+    padding-top: 41px;
+}
+
+.cms-container:before {
+    content: "Warning: this is a development/staging environment.";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: red;
+    line-height: 20px;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(255,0,0,0.05);
+    border-bottom: 1px solid rgba(255,0,0,0.25);
+    font-size: 13px;
+    font-weight: 700;
+}

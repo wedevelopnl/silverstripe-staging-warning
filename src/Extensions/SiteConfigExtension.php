@@ -9,6 +9,9 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataExtension;
 
+/**
+ * @property ?string $StagingWarningBarText
+ */
 final class SiteConfigExtension extends DataExtension
 {
     /**
