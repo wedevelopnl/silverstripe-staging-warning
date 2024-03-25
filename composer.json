@@ -14,7 +14,6 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.1",
         "silverstripe/framework": "^4 | ^5",
         "silverstripe/admin": "^1 | ^2"
     },
