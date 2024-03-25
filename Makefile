@@ -28,4 +28,8 @@ sh: ##@develop Open shell in container
 	${docker} sh
 
 test: ##@develop Run code tests
+	${docker} ./vendor/bin/php-cs-fixer fix --diff --dry-run
 	${docker} ./vendor/bin/phpstan analyse
+
+fix-cs: ##@develop Fix code styling
+	${docker} ./vendor/bin/php-cs-fixer fix

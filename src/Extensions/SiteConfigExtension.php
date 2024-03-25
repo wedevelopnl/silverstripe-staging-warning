@@ -21,7 +21,7 @@ final class SiteConfigExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields): void
     {
-        if(Director::isDev() || Director::isTest()){
+        if(Director::isDev() || Director::isTest()) {
             $fields->addFieldsToTab('Root.Admin.StagingWarning', [
                 TextField::create('StagingWarningBarText', 'Staging warning bar text'),
             ]);
